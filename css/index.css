@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+                /* Colors and Fonts */
 :root {
     --orange: hsl(35, 77%, 62%);
     --red: hsl(5, 85%, 63%);
@@ -28,7 +30,9 @@
     src: url(/assets/fonts/static/Inter-Regular.ttf);
 }
 
-.header {
+
+            /* Header Section */
+.logo {
     margin-top: 60px;
     margin-left: 15rem;
     display: inline-block;
@@ -51,7 +55,12 @@ a:hover {
     color: var(--red);
 }
 
-.main-bg {
+            /* Image and New Section */
+.main {
+    display: flex;
+}
+
+.image-background {
     top: 0;
     margin-left: 15rem;
     width: 57%;
@@ -60,17 +69,13 @@ a:hover {
     margin-top: 4.3em;
 }
 
-#main-bg {
+#new_section {
     display: inline-block;
     width: 28.5rem;
-    background-color: #000;
+    background-color: var(--dark-blue);
     margin-left: 32px;
     margin-top: 50px;
     height: 40rem;
-}
-
-.main {
-    display: flex;
 }
 
 .title {
@@ -79,6 +84,10 @@ a:hover {
     padding: 15px;
     color: var(--orange);
     margin-top: 15px;
+}
+
+.first_headline, .second_headline, .third_headline {
+    padding: 20px 15px 20px 15px;
 }
 
 h3 {
@@ -102,36 +111,43 @@ h3:hover {
     line-height: 20px;
 }
 
-.first, .second, .third {
-    padding: 20px 15px 20px 15px;
-}
+
 
 hr {
     width: 25.2em;
     margin-top: 10px;
 }
 
+        /* Text and Read More Section */
+
+#main {
+    display: flex;
+    margin-top: -14rem;
+}
+
+.text {
+    font-size: 32px;
+    font-weight: 900;
+    font-family: inter-extrabold;
+    width: 11em;
+    height: -10rem;  
+    margin-left: 15rem;
+    display: inline; 
+}
+        
 h1 {
    line-height: 1.03em; 
 }
 
-.text {
-    width: 11em;
-    font-size: 35px;
-    margin-left: 15rem;
-    font-family: inter-extrabold;
-    font-weight: 900;
-    display: inline; 
-    height: -10rem;  
-}
 
 #text {
     color: grey;
     width: 22.3em;
-    font-size: 20px;
-    margin-left: 10rem;
-    font-family: inter-regular;
+    font-size: 17px;
     font-weight: 300;
+    font-family: inter-regular;
+    word-spacing: 2px;
+    margin-left: 12.8rem;
     display: inline-block;
     line-height: 3vh;
 }
@@ -145,27 +161,24 @@ button {
     color: white;
     font-family: inter-bold;
     font-size: 16px;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 button:hover {
-    background-color: #000;
+    background-color: var(--dark-blue);
     cursor: pointer;
 }
 
-#main {
-    display: flex;
-    margin-top: -14rem;
-}
 
-.lol {
+        /* Category Section */
+.category {
     display: flex;
-    justify-content: space-evenly;
     margin-top: 5rem;
+    margin-left: 14rem;
 }
 
-.rt {
-    display: inline-block;
+.category > div {
+    margin-left: 10px;
 }
 
 .images {
@@ -174,28 +187,214 @@ button:hover {
     height: 11rem;
 }
 
+.category_item {
+    display: inline-block;
+}
+
+#category-list {
+    margin-left: 12.9rem;
+}
+
+#category_list {
+    margin-left: 17.3rem;
+}
+
 .number {
     font-size: 35px;
     font-family: inter-extrabold;
     color: var(--grayish-blue);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .number-text {
-    font-size: 23px;
+    font-size: 19px;
     font-family: inter-bold;
-    font-weight: 800;
+    font-weight: 900;
     color: #000;
     margin-bottom: 10px;
 }
+
+.number-text:hover {
+    color: var(--red);
+    cursor: pointer;
+}
 .description {
-    font-size: 14px;
+    font-size: 14.8px;
     font-family: inter-regular;
+    font-weight: 600;
     color: var(--grayish-blue);
-    width: 16rem;
+    width: 19rem;
+    line-height: 25px;
+    margin-bottom: 10px;
 }
 
 .number, .number-text, .description {
-    margin-left: 20px;
+    margin-left: 15px;
+}
+                                            /* The End */
+
+                                    /* Start of Responsiveness */
+@media (max-width:1720px ) {
+    .logo {
+        margin-left: 13rem;
+    }
+    nav {
+        margin-left: 72rem;
+    }
+    a {
+        padding-left: 34px;
+    }
+    #category_list {
+        margin-left: 13rem;
+    }
+}
+
+@media (max-width:1680px ) {
+    .logo {
+        margin-left: 13rem;
+    }
+    nav {
+        margin-left: 70rem;
+    }
+    a {
+        padding-left: 34px;
+    }
+    #category_list {
+        margin-left: 11rem;
+    }
+}
+
+@media (max-width:1600px ) {
+    .logo, .image-background, .text {
+        margin-left: 14rem;
+    }
+    nav {
+        margin-left: 63rem;
+    }
+    a {
+        padding-left: 34px;
+    }
+    .image_background {
+        width: 53%;
+    }
+    #new_section {
+        margin-left: 1.5rem;
+    }
+    .text {
+        font-size: 30px;
+    }
+    #text {
+        margin-left: 13rem;
+    }
+    #category-list {
+        margin-left: 10rem;
+    }
+    #category_list {
+        margin-left: 8rem;
+    }
+}
+@media (max-width:1440px ) {
+    .logo, .image-background, .text, .category {
+        margin-left: 16rem;
+    }
+    nav {
+        margin-left: 45.3rem;
+    }
+    a {
+        padding-left: 30px;
+    }
+    .image-background {
+        width: 50%;
+    }
+    .text {
+        font-size: 27px;
+    }
+    
+    #text {
+        margin-left: 4.8rem;
+        font-size: 16px;
+    }
+    #new_section {
+        width: 21%;
+    }
+
+    hr {
+        width: 22.2em;
+    }
+
+    button {
+        margin-top: 13px;
+    }
+    #category-list {
+        margin-left: -.8rem;
+    }
+    #category_list {
+        margin-left: 2.5rem;
+    }
+    .number {
+        font-size: 25px;
+    }
+    .number-text {
+        font-size: 16px;
+    }
+    .description {
+        font-size: 12.7px;
+    }
+}
+
+@media (max-width:1366px ) {
+    .logo, .image-background, .text, .category {
+        margin-left: 14rem;
+    }
+    .logo {
+        margin-top: 45px;
+    }
+    nav {
+        margin-left: 41rem;
+    }
+    a {
+        padding-left: 30px;
+    }
+    .image-background {
+        width: 50%;
+    }
+    .text {
+        font-size: 25px;
+    }
+    
+    #text {
+        margin-left: 6rem;
+        font-size: 15px;
+    }
+    #new_section {
+        width: 21%;
+    }
+
+    hr {
+        width: 22.2em;
+    }
+
+    button {
+        margin-top: 13px;
+    }
+
+    .category {
+        margin-top: 3rem;
+    }
+    #category-list {
+        margin-left: -1.3rem;
+    }
+    #category_list {
+        margin-left: 0rem;
+    }
+    .number {
+        font-size: 25px;
+    }
+    .number-text {
+        font-size: 16px;
+    }
+    .description {
+        font-size: 12.7px;
+    }
 }
 
